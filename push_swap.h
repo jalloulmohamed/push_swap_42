@@ -13,14 +13,6 @@ typedef struct s_list
     struct s_list	*prev;
 }t_list;
 
-typedef struct s_index
-{
-	int			indexa;
-	int			indexb;
-	int 		operation;
-	int 		size;
-
-}t_index;
 
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlen(const char *str);
@@ -28,7 +20,7 @@ size_t	ft_strlentab(char **str);
 char	*ft_strdup(const char *s1);
 char	**ft_split(char const *s, char c);
 int	ft_isdigit(int c);
-int	ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 int	ft_lstsize(t_list *lst);
 int main(int argc, char **argv);
 void	ft_lstadd_back(t_list **alst, t_list *new);
@@ -49,9 +41,12 @@ void ft_sort(t_list *stacka, t_list *stackb,int len);
 int checksort(char **tabint);
 int checksortlist(t_list *linked);
 int *ft_longlist(t_list *stacka);
-void sortall(t_list **stacka , t_list **stackb , int *sortlist,int len);
+void sortall(t_list **stacka , t_list **stackb ,int len,int div);
 void sorttre(t_list **stacka);
 void sortfiv(t_list **stacka,  t_list **stackb);
-
+void sort_tab(int arr[], int n);
+int	ft_strchr(int *s, int c);
+int *linked_to_tab(t_list *stack);
+void push_to_stack_a(t_list **stacka, t_list **stackb,int len);
 
 #endif

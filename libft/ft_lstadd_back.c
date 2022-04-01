@@ -6,7 +6,7 @@
 /*   By: mjalloul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:18:41 by mjalloul          #+#    #+#             */
-/*   Updated: 2021/11/17 21:59:03 by mjalloul         ###   ########.fr       */
+/*   Updated: 2022/04/01 18:15:53 by mjalloul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../push_swap.h"
@@ -26,5 +26,3 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 		*alst = new;
 	}
 }
-
-

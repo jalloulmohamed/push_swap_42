@@ -6,12 +6,12 @@
 /*   By: mjalloul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 20:57:37 by mjalloul          #+#    #+#             */
-/*   Updated: 2021/11/16 02:34:51 by mjalloul         ###   ########.fr       */
+/*   Updated: 2022/04/01 18:17:29 by mjalloul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../push_swap.h"
 
-t_list	*ft_lstnew(int	content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*p;
 

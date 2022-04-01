@@ -27,7 +27,7 @@ int checkdouble(char **tabint)
         j = i +1;
         while(j < k)
         {
-            if(ft_atoi(tabint[i]) == ft_atoi(tabint[j]))
+            if(ft_atoi(tabint[i]) == ft_atoi(tabint[j]) || ft_atoi(tabint[i]) > 2147483647 || ft_atoi(tabint[i]) < -2147483647)
                 return (1);
             j++;
         }
@@ -44,6 +44,8 @@ int main(int argc, char **argv)
     t_list *linked;
     t_list *stackb;
 
+    if (argc == 1)
+        return(0);
     stackb = NULL;
     i = 1;
     tab = ft_strdup("");
@@ -54,6 +56,7 @@ int main(int argc, char **argv)
         i++;
     }
     tabint = ft_split(tab,' ');
+    
     if(checkcar(tab) == 1 || checkdouble(tabint) == 1)
     {
         write(1,"ERROR",5);

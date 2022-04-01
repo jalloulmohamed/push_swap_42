@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjalloul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 16:36:57 by mjalloul          #+#    #+#             */
-/*   Updated: 2022/04/01 18:18:38 by mjalloul         ###   ########.fr       */
+/*   Created: 2022/04/01 18:18:59 by mjalloul          #+#    #+#             */
+/*   Updated: 2022/04/01 18:20:36 by mjalloul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../push_swap.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_strchr(int *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (lst)
+	i = longlistsort;
+	while (i)
 	{
-		lst = lst->next;
-		i++;
+		if (s[i - 1] == c)
+			return (1);
+		i--;
 	}
-	return (i);
+	return (0);
 }
