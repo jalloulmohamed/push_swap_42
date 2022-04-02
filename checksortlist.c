@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   checksortlist.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjalloul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 14:40:24 by mjalloul          #+#    #+#             */
-/*   Updated: 2022/04/02 22:18:32 by mjalloul         ###   ########.fr       */
+/*   Created: 2022/04/02 22:09:08 by mjalloul          #+#    #+#             */
+/*   Updated: 2022/04/02 22:13:18 by mjalloul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	ft_rr(t_list *linked, t_list *stackb, int p)
+int	checksortlist(t_list *linked)
 {
-	ft_ra(&linked, 0);
-	ft_rb(&stackb, 0);
-	if (p == 1)
-		write(1, "rr\n", 3);
+	while (linked->next)
+	{
+		if (linked->content < linked->next->content)
+		{
+			linked = linked->next;
+		}
+		else
+			return (1);
+	}
+	return (0);
 }

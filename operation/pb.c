@@ -6,7 +6,7 @@
 /*   By: mjalloul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 18:28:04 by mjalloul          #+#    #+#             */
-/*   Updated: 2022/04/01 18:30:54 by mjalloul         ###   ########.fr       */
+/*   Updated: 2022/04/02 22:17:26 by mjalloul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../push_swap.h"
@@ -23,6 +23,8 @@ void	ft_pb(t_list **stacka, t_list **stackb, int p)
 {
 	t_list	*tem;
 
+	if (!*stacka)
+		return ;
 	if (p == 1)
 		write(1, "pb\n", 3);
 	if (!*stackb)

@@ -5,22 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjalloul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 18:18:59 by mjalloul          #+#    #+#             */
-/*   Updated: 2022/04/01 18:20:36 by mjalloul         ###   ########.fr       */
+/*   Created: 2022/04/02 22:13:51 by mjalloul          #+#    #+#             */
+/*   Updated: 2022/04/02 22:14:14 by mjalloul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../push_swap.h"
 
-int	ft_strchr(int *s, int c)
+int	ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	i = longlistsort;
-	while (i)
+	i = 0;
+	while (s[i])
 	{
-		if (s[i - 1] == c)
+		if (s[i] == (char)c)
 			return (1);
-		i--;
+		i++;
 	}
+	if (s[i] == (char)c)
+		return (1);
 	return (0);
 }
